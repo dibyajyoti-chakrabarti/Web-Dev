@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(221, 219, 219);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20vw;
+            background-color: rgb(255, 255, 255);
+            padding: 3vh;
+            border-radius: 3vh;
+        }
+        #pic{
+            border: 2px solid black;
+            height: 42vh;
+            width: 21vw;
+            border-radius: 3vh;
+        }
+        nav{
+            padding-top: 2vh;
+        }
+        button{
+            margin-top: 2vh;
+            border-radius: 2.5vh;
+            background-color: white;
+            margin: 0vh 2vw 0vh;
+        }
+        #readmore{
+            color: blue;
+            background-color: skyblue;
+            font-size: 3vh;
+            border: skyblue 1px;
+            padding: 1vw;
+            border-radius: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <img id="pic" src="Images/user_default1.png" alt="">
+        <nav>
+            <button type="button">Nature</button>
+            <button type="button">Lake</button>
+        </nav>
+        <div class="textbody">
+            <h1>Lago di Braes</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto odit vitae magni debitis ex et non totam obcaecati neque quod nobis sequi iste praesentium odio placeat voluptatem eos commodi officiis, culpa dolores consequatur. Est porro officiis voluptates, aut nihil odio!</p>
+        </div>
+        <button type="button" id="readmore">Read More</button>
+    </div>
+    
+</body>
+</html>
