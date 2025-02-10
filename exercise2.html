@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --nav-color: rgb(238, 4, 121);
+            --mainbody-color: pink;
+        }
+        
+        header{
+            background-color: var(--nav-color);
+            position: sticky;
+            top: 0px;
+            padding: 2vh 1vw;
+        }
+        ul li{
+            list-style: none;
+            padding: 0vw 2vw;
+            font-family: "Poppins", serif;
+            font-weight: bold;
+            font-size: 5vh;
+        }
+        ul{
+            display: flex;
+        }
+        .mainbody{
+            background-color: var(--mainbody-color);
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .mainbody img{
+            margin: 3vh;
+            width: 40vw;
+            border-radius: 10vh;
+        }
+        .images{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .note{
+            font-family: "Roboto Slab", serif;
+            background-color: white;
+            width: 30vw;
+            margin-left: 35vw;
+            text-align: center;
+            
+            font-size: 30px;
+            border-radius: 5vh;
+            margin-bottom: 2vh;
+        }
+        .logo img{
+            width: 10vw;
+            border-radius: 10vw;
+            border: 7px solid rgb(62, 2, 2);
+        }
+        .logo{
+            position: fixed;
+            top: 75vh;
+            left: 86vw;
+            z-index: 2;
+        }
+        footer{
+            background-color: var(--nav-color);
+            height: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Services</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="mainbody">
+        <div class="images">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/basset-hound-puppy-outdoors-royalty-free-image-178847738-1565189803.jpg?crop=0.670xw:1.00xh;0.282xw,0&resize=980:*" alt="">
+
+            <img src="https://hips.hearstapps.com/hmg-prod/images/siberian-husky-dog-running-on-grass-outdoors-royalty-free-image-585500209-1565190167.jpg?crop=0.66635xw:1xh;center,top&resize=980:*" alt="">
+        </div>
+        
+        <div class="note">
+            WELCOME TO THE DOG HOUSE
+        </div>
+    </div>
+    <div class="logo">
+        <img src="https://static.vecteezy.com/system/resources/previews/009/651/674/non_2x/cute-dog-logo-free-vector.jpg" alt="">
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
