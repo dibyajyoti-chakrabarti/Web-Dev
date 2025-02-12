@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Exercise</title>
+    <style>
+        main{
+            padding: 20px;
+        }
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .heading img{
+            width: 200px;
+            height: 80px;
+        }
+        .heading{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+            /* border: 1px solid black; */
+        }
+        main .heading p:nth-child(2){
+            font-size: 25px;
+        }
+        .heading :nth-child(3){
+            position: relative;
+            top:4px;
+            font-size: 12px;
+        }
+        .options .item p {
+            word-wrap: break-word; 
+            text-align: center; 
+            width: 90%; 
+            font-size: 10px;
+        }
+        .options .item button{
+            margin: 10px;
+            height: 30px;
+            width: 120px;
+            border-radius: 10px;
+            border: none;
+            background-color: #5bb85d;
+            color: white;
+            cursor: pointer;
+        }
+        .item{
+            background-color: #f9f9f9;
+            height: 150px;
+            width: 230px;
+            border-radius: 10px;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            justify-content: center;
+            align-content: center;
+            margin-top: 20px;
+            
+        }
+        .options .item h1{
+            word-wrap: break-word;
+            text-align: center;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <!-- https://www.ultraedit.com/downloads/ultraedit-download-thank-you/ -->
+    <main>
+        <div class="heading">
+            <img src="Images/logo1.png" alt="">
+            <p>Download UltraEdit</p>
+            <p>v2024.2 (released 2025-01-15) | Hotfix information </p>
+        </div>
+        <div class="options">
+            <div class="english item">
+                <h1>English</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="german item">
+                <h1>Deutsch</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="italian item">
+                <h1>Italiano</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="spanish item">
+                <h1>Español</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="french item">
+                <h1>français</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="portuguese item">
+                <h1>Português brasileiro</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="japanese item">
+                <h1>日本</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="korean item">
+                <h1>한국어</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="chinese item">
+                <h1>华语</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+            <div class="trad_chinese item">
+                <h1>華語</h1>
+                <button>Download 64-bit</button>
+                <p>SHA256</p>
+                <p>B06BC2BB50623A7B1A1C0C2D1C7A6BB5346515A9F5FF2CDE19A60EEE36DC702E</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
