@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            width: 750px;
+            height: 250px;
+            background-color: grey;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-end;
+        }
+        .ball{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border: 3px solid black;
+            background-color: red;
+            animation: bounce 4s linear 0s infinite alternate none;
+        }
+        @keyframes bounce {
+            0%{
+                transform: translate(0, 0);
+            }
+            12.5%{
+                transform: translate(156.25%, -250%);
+            }
+            25%{
+                transform: translate(312.5%, 0%)
+            }
+            37.5%{
+                transform: translate(468.75%, -250%)
+            }
+            50%{
+                transform: translate(625%, 0%);
+            }
+            62.5%{
+                transform: translate(781.25%, -250%)
+            }
+            75%{
+                transform: translate(937.5%, 0%)
+            }
+            87.5%{
+                transform: translate(1093.75%, -250%)
+            }
+            100%{
+                transform: translate(1250%, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="ball"></div>
+    </main>
+</body>
+</html>
