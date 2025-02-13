@@ -4,6 +4,7 @@
 }
 body{
     background-color: black;
+    overflow-x: hidden;
 }
 .background img{
     width: 98.5vw;
@@ -90,6 +91,10 @@ body{
     background-color: #141414;
     border: 1px grey solid;
     border-radius: 5px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 0px 20px;
 }
 .lowerhalf button{
     width: 15vw;
@@ -105,10 +110,33 @@ body{
     border: 1px solid #c11219;
     border-radius: 5px;
 }
+.lowerhalf input::placeholder{
+    font-family: sans-serif;
+    font-size: 20px;
+}
 .lowerhalf{
     display: flex;
     justify-content: center;
     position: absolute;
     top:90%;
     width: 98.5vw;
+}
+.e1{
+    position: absolute;
+    width: 120%; 
+    height: 250px;
+    background: linear-gradient(0.25turn, #000000, #dc0c1f, #000000);
+    border-radius: 60%/100px;
+    top: 110vh;
+    left: -10%;
+}
+.e2{
+    position: absolute;
+    width: 120%; 
+    height: 250px;
+    background: linear-gradient(#141d46,black);
+    border-radius: 70%/100px;
+    top: 111vh;
+    left: -10%;
+    background-color: white;
 }
