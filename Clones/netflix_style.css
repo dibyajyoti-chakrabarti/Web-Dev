@@ -146,7 +146,7 @@ body{
 }
 .content{
     position: absolute;
-    top: 130vh;
+    top: 115vh;
 }
 .box{
     padding: 23px;
@@ -251,7 +251,7 @@ body{
 }
 footer{
     position: absolute;
-    top: 415vh;
+    top: 458vh;
     color: #b6b6b6;
     font-family: sans-serif;
     font-weight: 500;
@@ -286,4 +286,64 @@ a{
 }
 main{
     padding-left: 7vw;
+}
+.content .trending .container{
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    /* height: 2vh; */
+    position: relative;
+}
+.content .trending .container .item{
+    
+    height: 40vh;   
+    width: 12.5vw;
+    border-radius: 7px;
+    border: none;
+    background-color: #3b3b3b;
+    cursor: pointer;
+    margin: 0px 2vw;
+}
+.content .trending .container .item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.content .trending .container .item .number p:nth-child(1){
+    position: absolute;
+    bottom: 5px;
+    left: -17px;
+    font-size: 100px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: white;
+}
+.content .trending .container .item .number p:nth-child(2){
+    position: absolute;
+    bottom: 5px;
+    left: -17px;
+    font-size: 100px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.content .trending .container .item:hover,
+.content .trending .container .item .number{
+    transform: scale(1.1);
+    /* transform-origin: bottom left; */
+}
+.content .trending .container .next{
+    height: 20vh;
+    width: 2.5vw;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    /* transform: translateX(-3vw); */
+    border: none;
+    border-radius: 7px;
+}
+.content .trending .container .next:hover{
+    background-color: rgb(65, 65, 65);
 }
