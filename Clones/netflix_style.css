@@ -136,3 +136,154 @@ body{
     left: -10%;
     background-color: white;
 }
+.heading{
+    margin-bottom: 3vh;
+    margin-top: 10vh;
+    color: white;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.content{
+    position: absolute;
+    top: 130vh;
+}
+.box{
+    padding: 23px;
+    border-radius: 20px;
+    width: 38vw;
+    height: 29vh;
+    background: linear-gradient(to right bottom, #1b224b,#220f1a);
+}
+.box p:nth-child(1){
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.box p:nth-child(2){
+    color: #a5a5b4;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    width: 38vw;
+}
+.box img{
+    transform: translate(32vw,1vh);
+    width: 70px;
+}
+.boxes{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    
+}
+.question{
+    display: flex;
+    align-items: center;
+    background-color: #2d2d2d;
+    width: 85vw;
+    text-align: start;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    border: solid 1px black;
+    padding: 10px 20px;
+    margin-bottom: 7px;
+}
+.question p:nth-child(1){
+    width: 100vw;
+}
+.question p:nth-child(2){
+    width: 70vw;
+    display: flex;
+    justify-content: end;
+    font-size: 60px;
+}
+.question:hover{
+    background-color: rgb(65, 65, 65);
+}
+.endmain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.endmain p:nth-child(1){
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+.lowerendmain{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 85vw;
+}
+.lowerendmain input{
+    width: 40vw;
+    height: 50px;
+    background-color: #141414;
+    border: 1px grey solid;
+    border-radius: 5px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 0px 20px;
+}
+.lowerendmain button{
+    width: 15vw;
+    height: 50px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #c11219;
+    border: 1px solid #c11219;
+    border-radius: 5px;
+}
+footer{
+    position: absolute;
+    top: 415vh;
+    color: #b6b6b6;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding-left: 7vw;
+}
+.startfooter{
+    padding-bottom: 50px;
+}
+a{
+    color: #b6b6b6;
+}
+.links{
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.endendfooter .lang{
+    font-family: sans-serif;
+    font-weight:600;
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    height: 40px;
+    margin: 50px 0px;
+}
+.endendfooter p{
+    padding-bottom: 70px;
+}
+main{
+    padding-left: 7vw;
+}
