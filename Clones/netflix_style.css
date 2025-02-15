@@ -85,7 +85,7 @@ body{
     gap: 10px;
     justify-content: center;
     position: absolute;
-    top:85%;
+    top:80vh;
     width: 98.5vw;
 }
 .lowerhalf input{
@@ -225,7 +225,7 @@ body{
     width: 85vw;
 }
 .lowerendmain input{
-    width: 40vw;
+    width: 400px;
     height: 50px;
     background-color: #141414;
     border: 1px grey solid;
@@ -236,7 +236,7 @@ body{
     padding: 0px 20px;
 }
 .lowerendmain button{
-    width: 15vw;
+    width: 150px;
     height: 50px;
     color: white;
     font-family: sans-serif;
