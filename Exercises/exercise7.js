@@ -12,7 +12,6 @@ function f(title, channel, views, months, duration, thumbnail){
         backgroundColor: "black",
         color: "white",
         fontFamily: "sans-serif",
-        // overflow: "auto"
     })
 
     let container = document.createElement("div")
