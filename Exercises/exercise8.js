@@ -1,31 +1,95 @@
-function delay(delayTime){
-    return new Promise(resolve=>{
-        setTimeout(resolve, delayTime)
-    })
+function delay(delayTime) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, delayTime);
+  });
 }
-function randomDelay(){
-    return ((parseInt(Math.random()*100)%8)+1)*1000
-
+function randomDelay() {
+  return ((parseInt(Math.random() * 100) % 8) + 1) * 1000;
 }
-async function f(message){
-    let a = await delay(randomDelay())
-    let body = document.body
-    let container = document.createElement("div")
-    Object.assign(container.style, {
-        backgroundColor: "black"
-    })
-    body.append(container)
-    container.innerHTML = message
+function flickeringLoadingBar(loadingDot, t) {
+  Object.assign(loadingDot.style, { transform: "translateX(0px)" });
+  setTimeout(() => {
+    Object.assign(loadingDot.style, { transform: "translateX(30px)" });
+  }, 500);
+  setTimeout(() => {
+    Object.assign(loadingDot.style, { transform: "translateX(60px)" });
+  }, 1000);
+  setInterval(() => {
+    setTimeout(() => {
+      Object.assign(loadingDot.style, {
+        transform: "translateX(0px)",
+      });
+    }, 500);
+    setTimeout(() => {
+      Object.assign(loadingDot.style, {
+        transform: "translateX(30px)",
+      });
+    }, 1000);
+    setTimeout(() => {
+      Object.assign(loadingDot.style, {
+        transform: "translateX(60px)",
+      });
+    }, 1500);
+  }, 1500);
     
-    console.log(message)
+}
+async function f(message, t, index) {
+  await delay(t);
+  let body = document.body;
+  let container = document.createElement("div");
+  Object.assign(container.style, {
+    backgroundColor: "black",
+    display: "flex",
+    padding: "0px 10vw",
+    height: "14vh",
+  });
+  body.append(container);
+  container.innerHTML = message;
+
+  if (index != 0) {
+    let loadingBox = document.createElement("div");
+    Object.assign(loadingBox.style, {
+      width: "8vw",
+      height: "8vh",
+      backgroundColor: "black",
+      border: "solid 2px white",
+      marginLeft: "7vw",
+      padding: "0px 0px",
+    });
+    container.append(loadingBox);
+
+    let loadingDot = document.createElement("div");
+    Object.assign(loadingDot.style, {
+      position: "relative",
+      bottom: "40.5vh",
+      right: "1vw",
+      fontSize: "45vh",
+    });
+    loadingDot.innerHTML = ".";
+    loadingBox.append(loadingDot);
+
+    flickeringLoadingBar(loadingDot, t);
+  }
 }
 
 async function main() {
-    await f("Initializing Hacking".toUpperCase());
-    await f("Reading your files".toUpperCase());
-    await f("Password files Detected".toUpperCase());
-    await f("Sending all password and personal files to server".toUpperCase());
-    await f("Cleaning up".toUpperCase());
+  let messages = [
+    "you kinda messed up",
+    "Initializing Hacking".toLowerCase(),
+    "Reading your files".toLowerCase(),
+    "Password files Detected".toLowerCase(),
+    "Sending all password and personal files to server".toLowerCase(),
+    "Cleaning up".toLowerCase(),
+  ];
+  let delays = [];
+  for (const index in messages) {
+    delays.push(randomDelay());
+  }
+  for (const index in messages) {
+    let delayTime = delays[index]
+    if (index < 2) 
+        delayTime = 1000;
+    await f(messages[index], delayTime, index);
+  }
 }
-
-main()
+main();
