@@ -6,34 +6,42 @@ function delay(delayTime) {
 function randomDelay() {
   return ((parseInt(Math.random() * 100) % 8) + 1) * 1000;
 }
-function flickeringLoadingBar(loadingDot, t) {
-  Object.assign(loadingDot.style, { transform: "translateX(0px)" });
-  setTimeout(() => {
-    Object.assign(loadingDot.style, { transform: "translateX(30px)" });
-  }, 500);
-  setTimeout(() => {
-    Object.assign(loadingDot.style, { transform: "translateX(60px)" });
-  }, 1000);
-  setInterval(() => {
+function flickeringLoadingBar(loadingDot,loadingBox, t,ft) {
+    Object.assign(loadingDot.style, { transform: "translateX(0px)" });
     setTimeout(() => {
-      Object.assign(loadingDot.style, {
-        transform: "translateX(0px)",
-      });
+      Object.assign(loadingDot.style, { transform: "translateX(30px)" });
     }, 500);
     setTimeout(() => {
-      Object.assign(loadingDot.style, {
-        transform: "translateX(30px)",
-      });
+      Object.assign(loadingDot.style, { transform: "translateX(60px)" });
     }, 1000);
-    setTimeout(() => {
-      Object.assign(loadingDot.style, {
-        transform: "translateX(60px)",
-      });
+    setInterval(() => {
+      setTimeout(() => {
+        Object.assign(loadingDot.style, {
+          transform: "translateX(0px)",
+        });
+      }, 500);
+      setTimeout(() => {
+        Object.assign(loadingDot.style, {
+          transform: "translateX(30px)",
+        });
+      }, 1000);
+      setTimeout(() => {
+        Object.assign(loadingDot.style, {
+          transform: "translateX(60px)",
+        });
+      }, 1500);
     }, 1500);
-  }, 1500);
-    
+  setTimeout(()=>{
+    loadingDot.remove()
+    loadingBox.innerHTML = "DONE"
+    Object.assign(loadingBox.style, {
+      fontSize: "40px",
+      border: "none",
+      color: "lightgreen"
+    })
+  },ft)
 }
-async function f(message, t, index) {
+async function f(message, t,ft, index) {
   await delay(t);
   let body = document.body;
   let container = document.createElement("div");
@@ -68,7 +76,7 @@ async function f(message, t, index) {
     loadingDot.innerHTML = ".";
     loadingBox.append(loadingDot);
 
-    flickeringLoadingBar(loadingDot, t);
+    flickeringLoadingBar(loadingDot,loadingBox, t,ft);
   }
 }
 
@@ -82,14 +90,26 @@ async function main() {
     "Cleaning up".toLowerCase(),
   ];
   let delays = [];
+  let future = [];
   for (const index in messages) {
-    delays.push(randomDelay());
+    delays.push(randomDelay())
   }
+  for (const index in messages) {
+    if (index<delays.length-1)
+      future.push(delays[parseInt(index)+1])
+  }
+  future.push(randomDelay())
+
+  console.log(delays)
+  console.log(future)
+
   for (const index in messages) {
     let delayTime = delays[index]
+    let futureTime = future[index]
     if (index < 2) 
         delayTime = 1000;
-    await f(messages[index], delayTime, index);
+    await f(messages[index], delayTime,futureTime, index);
   }
+  await f("you're done bro, flee the country",0,0,0)
 }
 main();
