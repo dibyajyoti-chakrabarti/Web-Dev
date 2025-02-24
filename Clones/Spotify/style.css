@@ -1,0 +1,140 @@
+:root{
+    --iconSize: 45px;
+    --iconContentSize: 25px;
+    --fontColor: white;
+    --defaultBackgroundColor: black;
+    --iconBackgroundColor: #1f1f1f;
+    --iconHoverBackgroundColor: #2A2A2A;
+    --navTextColor: #9c9c9c;
+    --navFontSize: 15px;
+    --hoverScaleRatio: 1.1;
+    --loginHoverColor: #F0F0F0;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: white;
+    color: var(--fontColor);
+}
+header{
+    display: flex;
+    background-color: var(--defaultBackgroundColor);
+    align-items: center;
+}
+.container_1{
+    display: flex;
+    justify-content: flex-end;
+}
+.iconContent{
+    height: var(--iconContentSize);
+    width: var(--iconContentSize);
+    padding: 0px 10px;
+}
+.iconShapped{
+    height: var(--iconSize);
+    width: var(--iconSize);
+    cursor: pointer;
+    margin: 10px 0px;
+    margin-left: 20px;
+}
+.icon{
+    background-color: var(--iconBackgroundColor);
+    border-radius: var(--iconSize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--iconBackgroundColor);
+}
+.icon:hover{
+    background-color: var(--iconHoverBackgroundColor);
+    transform: scale(var(--hoverScaleRatio));
+}
+.container_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+.search{
+    background-color: var(--iconBackgroundColor);
+    color: var(--navTextColor);
+    height: var(--iconSize);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: var(--iconSize);
+}
+.search:hover, .search:hover .searchInput {
+    background-color: var(--iconHoverBackgroundColor);
+    cursor: text;
+}
+.searchInput{
+    background-color: var(--iconBackgroundColor);
+    border: none;
+    border-right: 1px solid var(--navTextColor);
+    font-weight: 700;
+    font-size: var(--navFontSize);
+    padding-right: 30px;
+    cursor: text !important;
+    color: var(--fontColor);
+    outline: none;
+}
+.searchElement{
+    height: var(--iconContentSize);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.nav_1{
+    margin-right: 20px;
+}
+.nav_2{
+    margin-left: 20px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navText{
+    background-color: var(--defaultBackgroundColor);
+    cursor: pointer;
+    height: var(--iconSize);
+    font-size: var(--navFontSize);
+    font-weight: 700;
+    color: var(--navTextColor);
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.navText:hover{
+    color: white;
+    transform: scale(var(--hoverScaleRatio));
+}
+
+.navText:hover .iconContent {
+    filter: brightness(100);
+}
+header p{
+    height: var(--iconContentSize);
+    width: 2px;
+    background-color: white;
+}
+.login{
+    height: var(--iconSize);
+    font-size: var(--navFontSize);
+    font-weight: 750;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--iconSize);
+    border: none;
+    cursor: pointer;
+}
+.login:hover{
+    transform: scale(var(--hoverScaleRatio));
+    background-color: var(--loginHoverColor);
+}
