@@ -13,3 +13,7 @@ Watch: https://www.youtube.com/watch?v=tVzUXW6siu0&list=PLu0W_9lII9agq5TrH9XLIKQ
 
 Events: https://developer.mozilla.org/en-US/docs/Web/Events
 <br>
+Errors: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+<br>
+Install tailwind CSS: https://www.youtube.com/watch?v=Kh3xj-5nMqw
+<br>
