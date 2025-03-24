@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@layer base{
+    h1{
+        font-size: 100px;
+        color: red;
+        border: solid 2px black;
+        display: inline;
+        border-radius: 30px;
+    }
+}
