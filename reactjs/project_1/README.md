@@ -1,0 +1,1 @@
+This project helps understand concepts like HOOKS, COMPONENTS and FRAGMENTS. The aim of the project is to have 2 buttons which increament a default starting value which is reflected on the UI dynamically.

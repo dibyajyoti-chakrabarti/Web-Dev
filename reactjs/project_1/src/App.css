@@ -1,0 +1,4 @@
+@import "tailwindcss";
+body{
+    @apply bg-gray-700 flex justify-center items-center h-screen;
+}
