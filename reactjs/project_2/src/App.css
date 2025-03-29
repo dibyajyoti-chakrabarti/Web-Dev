@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@layer base{
+    button{
+        @apply bg-blue-500 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none w-[7vw] hover:bg-blue-700 transition duration-300 ease-in-out flex justify-center items-center;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 1.2rem;
+    }
+}
