@@ -1,0 +1,4 @@
+@import "tailwindcss";
+select{
+    @apply border-3 border-black w-25 rounded-r-md text-3xl bg-white h-12;
+}
