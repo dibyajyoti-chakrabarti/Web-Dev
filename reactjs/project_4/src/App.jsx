@@ -11,7 +11,10 @@ function App() {
   const [amt,setAmt] = useState(0)
   return (
     <>
-    <div className='bg-gray-600 flex justify-center items-center h-[100vh]'>
+    <div className='bg-gray-600 flex flex-col justify-center items-center h-[100vh]'>
+        <h1 className='text-5xl text-white font-bold m-7'>
+          Currency Conversion System
+        </h1>
         <div className='bg-gray-400 w-80 h-85 border-4 border-black rounded-3xl flex flex-col items-center'>
           <div className='flex items-center p-5'>
             <input type="number" onChange={(e)=>{
