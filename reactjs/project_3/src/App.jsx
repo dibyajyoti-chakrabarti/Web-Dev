@@ -33,7 +33,7 @@ function App() {
           onClick={()=>{
             passRef.current.select()
             passRef.current.setSelectionRange(0,10)
-            navigator.clipboard.writeText(pass.slice(0,10))
+            window.navigator.clipboard.writeText(pass.slice(0,10))
           }}>
             COPY
           </button>

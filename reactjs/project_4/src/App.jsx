@@ -19,7 +19,7 @@ function App() {
             }}
             placeholder='Amount'
             className='bg-white  rounded-l-md p-2 w-35 h-12 border-r-0  border-3 border-black text-3xl'/>
-            <select name="" id=""
+            <select name="" id="" value={currency}
               onChange={(e)=>{
                 setCurrency(e.target.value)
               }}>
@@ -31,7 +31,11 @@ function App() {
           </div>
           <hr className= 'border-2 mb-7 border-black w-80'/>
           <button className='bg-green-500 text-white font-bold pl-5 pr-5 pt-2 pb-2 mb-7 border-3 border-black rounded-3xl hover:bg-green-400 cursor-pointer text-5xl'
-          // onClick
+          onClick={()=>{
+            let temp = currency
+            setCurrency(target)
+            setTarget(temp)
+          }}
           >
           
             SWITCH
@@ -41,7 +45,7 @@ function App() {
             <div className='bg-white p-2 w-35 h-12 border-r-0  border-3 border-black text-3xl rounded-l-md'>
               {(exchangeData[target]*amt).toFixed(2)}
             </div>
-            <select name="" id=""
+            <select name="" id="" value={target}
             onChange={(e)=>{
               setTarget(e.target.value)
             }}>
